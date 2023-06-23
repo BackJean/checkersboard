@@ -1,0 +1,65 @@
+.checkers-board {
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.dark {
+  background-color: #7e0505;
+  color: #fff;
+}
+
+.light {
+  background-color: #cd853f;
+  color: #000;
+}
+
+.piece {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.white-piece {
+  background-color: #cac1c1;
+}
+
+.black-piece {
+  background-color: #000;
+}
+
+
+.white-piece::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.212) 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.black-piece::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgba(247, 247, 247, 0.082) 0%, rgba(247, 247, 247, 0.027) 100%);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
